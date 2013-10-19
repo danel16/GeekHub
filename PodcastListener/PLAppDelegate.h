@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class PLViewController;
+@class PLListViewController;
 
 @interface PLAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) PLViewController *viewController;
+@property (strong, nonatomic) PLListViewController *viewController;
+
+@property (strong, nonatomic) UINavigationController *navigationController;
 
 @end

@@ -16,13 +16,15 @@
 		C6D942EB1812B5230069D294 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D942EA1812B5230069D294 /* Default.png */; };
 		C6D942ED1812B5230069D294 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D942EC1812B5230069D294 /* Default@2x.png */; };
 		C6D942EF1812B5230069D294 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D942EE1812B5230069D294 /* Default-568h@2x.png */; };
-		C6D942F21812B5230069D294 /* PLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D942F11812B5230069D294 /* PLViewController.m */; };
-		C6D942F51812B5230069D294 /* PLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D942F31812B5230069D294 /* PLViewController.xib */; };
+		C6D942F21812B5230069D294 /* PLListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D942F11812B5230069D294 /* PLListViewController.m */; };
+		C6D942F51812B5230069D294 /* PLListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D942F31812B5230069D294 /* PLListViewController.xib */; };
 		C6D942FD1812B5230069D294 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942FC1812B5230069D294 /* SenTestingKit.framework */; };
 		C6D942FE1812B5230069D294 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942D81812B5230069D294 /* UIKit.framework */; };
 		C6D942FF1812B5230069D294 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942DA1812B5230069D294 /* Foundation.framework */; };
 		C6D943071812B5230069D294 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6D943051812B5230069D294 /* InfoPlist.strings */; };
 		C6D9430A1812B5230069D294 /* PodcastListenerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D943091812B5230069D294 /* PodcastListenerTests.m */; };
+		C6D943161812B5EB0069D294 /* PLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D943141812B5EB0069D294 /* PLDetailViewController.m */; };
+		C6D943171812B5EB0069D294 /* PLDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D943151812B5EB0069D294 /* PLDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,15 +51,18 @@
 		C6D942EA1812B5230069D294 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C6D942EC1812B5230069D294 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C6D942EE1812B5230069D294 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		C6D942F01812B5230069D294 /* PLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLViewController.h; sourceTree = "<group>"; };
-		C6D942F11812B5230069D294 /* PLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLViewController.m; sourceTree = "<group>"; };
-		C6D942F41812B5230069D294 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PLViewController.xib; sourceTree = "<group>"; };
+		C6D942F01812B5230069D294 /* PLListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLListViewController.h; sourceTree = "<group>"; };
+		C6D942F11812B5230069D294 /* PLListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLListViewController.m; sourceTree = "<group>"; };
+		C6D942F41812B5230069D294 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PLListViewController.xib; sourceTree = "<group>"; };
 		C6D942FB1812B5230069D294 /* PodcastListenerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodcastListenerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D942FC1812B5230069D294 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C6D943041812B5230069D294 /* PodcastListenerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PodcastListenerTests-Info.plist"; sourceTree = "<group>"; };
 		C6D943061812B5230069D294 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C6D943081812B5230069D294 /* PodcastListenerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PodcastListenerTests.h; sourceTree = "<group>"; };
 		C6D943091812B5230069D294 /* PodcastListenerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PodcastListenerTests.m; sourceTree = "<group>"; };
+		C6D943131812B5EB0069D294 /* PLDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLDetailViewController.h; sourceTree = "<group>"; };
+		C6D943141812B5EB0069D294 /* PLDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLDetailViewController.m; sourceTree = "<group>"; };
+		C6D943151812B5EB0069D294 /* PLDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PLDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +124,13 @@
 			children = (
 				C6D942E71812B5230069D294 /* PLAppDelegate.h */,
 				C6D942E81812B5230069D294 /* PLAppDelegate.m */,
-				C6D942F01812B5230069D294 /* PLViewController.h */,
-				C6D942F11812B5230069D294 /* PLViewController.m */,
-				C6D942F31812B5230069D294 /* PLViewController.xib */,
+				C6D942F01812B5230069D294 /* PLListViewController.h */,
+				C6D942F11812B5230069D294 /* PLListViewController.m */,
+				C6D942F31812B5230069D294 /* PLListViewController.xib */,
 				C6D942DF1812B5230069D294 /* Supporting Files */,
+				C6D943131812B5EB0069D294 /* PLDetailViewController.h */,
+				C6D943141812B5EB0069D294 /* PLDetailViewController.m */,
+				C6D943151812B5EB0069D294 /* PLDetailViewController.xib */,
 			);
 			path = PodcastListener;
 			sourceTree = "<group>";
@@ -236,7 +244,8 @@
 				C6D942EB1812B5230069D294 /* Default.png in Resources */,
 				C6D942ED1812B5230069D294 /* Default@2x.png in Resources */,
 				C6D942EF1812B5230069D294 /* Default-568h@2x.png in Resources */,
-				C6D942F51812B5230069D294 /* PLViewController.xib in Resources */,
+				C6D942F51812B5230069D294 /* PLListViewController.xib in Resources */,
+				C6D943171812B5EB0069D294 /* PLDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +282,8 @@
 			files = (
 				C6D942E51812B5230069D294 /* main.m in Sources */,
 				C6D942E91812B5230069D294 /* PLAppDelegate.m in Sources */,
-				C6D942F21812B5230069D294 /* PLViewController.m in Sources */,
+				C6D942F21812B5230069D294 /* PLListViewController.m in Sources */,
+				C6D943161812B5EB0069D294 /* PLDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,12 +314,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		C6D942F31812B5230069D294 /* PLViewController.xib */ = {
+		C6D942F31812B5230069D294 /* PLListViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C6D942F41812B5230069D294 /* en */,
 			);
-			name = PLViewController.xib;
+			name = PLListViewController.xib;
 			sourceTree = "<group>";
 		};
 		C6D943051812B5230069D294 /* InfoPlist.strings */ = {
