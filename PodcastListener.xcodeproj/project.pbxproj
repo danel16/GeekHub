@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C6D942D91812B5230069D294 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942D81812B5230069D294 /* UIKit.framework */; };
+		C6D942DB1812B5230069D294 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942DA1812B5230069D294 /* Foundation.framework */; };
+		C6D942DD1812B5230069D294 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942DC1812B5230069D294 /* CoreGraphics.framework */; };
+		C6D942E31812B5230069D294 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6D942E11812B5230069D294 /* InfoPlist.strings */; };
+		C6D942E51812B5230069D294 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D942E41812B5230069D294 /* main.m */; };
+		C6D942E91812B5230069D294 /* PLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D942E81812B5230069D294 /* PLAppDelegate.m */; };
+		C6D942EB1812B5230069D294 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D942EA1812B5230069D294 /* Default.png */; };
+		C6D942ED1812B5230069D294 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D942EC1812B5230069D294 /* Default@2x.png */; };
+		C6D942EF1812B5230069D294 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D942EE1812B5230069D294 /* Default-568h@2x.png */; };
+		C6D942F21812B5230069D294 /* PLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D942F11812B5230069D294 /* PLViewController.m */; };
+		C6D942F51812B5230069D294 /* PLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D942F31812B5230069D294 /* PLViewController.xib */; };
+		C6D942FD1812B5230069D294 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942FC1812B5230069D294 /* SenTestingKit.framework */; };
+		C6D942FE1812B5230069D294 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942D81812B5230069D294 /* UIKit.framework */; };
+		C6D942FF1812B5230069D294 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942DA1812B5230069D294 /* Foundation.framework */; };
+		C6D943071812B5230069D294 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6D943051812B5230069D294 /* InfoPlist.strings */; };
+		C6D9430A1812B5230069D294 /* PodcastListenerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D943091812B5230069D294 /* PodcastListenerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C6D943001812B5230069D294 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6D942CD1812B5230069D294 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6D942D41812B5230069D294;
+			remoteInfo = PodcastListener;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C6D942D51812B5230069D294 /* PodcastListener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodcastListener.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6D942D81812B5230069D294 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C6D942DA1812B5230069D294 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C6D942DC1812B5230069D294 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C6D942E01812B5230069D294 /* PodcastListener-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PodcastListener-Info.plist"; sourceTree = "<group>"; };
+		C6D942E21812B5230069D294 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C6D942E41812B5230069D294 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C6D942E61812B5230069D294 /* PodcastListener-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PodcastListener-Prefix.pch"; sourceTree = "<group>"; };
+		C6D942E71812B5230069D294 /* PLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAppDelegate.h; sourceTree = "<group>"; };
+		C6D942E81812B5230069D294 /* PLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAppDelegate.m; sourceTree = "<group>"; };
+		C6D942EA1812B5230069D294 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C6D942EC1812B5230069D294 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C6D942EE1812B5230069D294 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C6D942F01812B5230069D294 /* PLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLViewController.h; sourceTree = "<group>"; };
+		C6D942F11812B5230069D294 /* PLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLViewController.m; sourceTree = "<group>"; };
+		C6D942F41812B5230069D294 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PLViewController.xib; sourceTree = "<group>"; };
+		C6D942FB1812B5230069D294 /* PodcastListenerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodcastListenerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6D942FC1812B5230069D294 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C6D943041812B5230069D294 /* PodcastListenerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PodcastListenerTests-Info.plist"; sourceTree = "<group>"; };
+		C6D943061812B5230069D294 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C6D943081812B5230069D294 /* PodcastListenerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PodcastListenerTests.h; sourceTree = "<group>"; };
+		C6D943091812B5230069D294 /* PodcastListenerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PodcastListenerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C6D942D21812B5230069D294 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D942D91812B5230069D294 /* UIKit.framework in Frameworks */,
+				C6D942DB1812B5230069D294 /* Foundation.framework in Frameworks */,
+				C6D942DD1812B5230069D294 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6D942F71812B5230069D294 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D942FD1812B5230069D294 /* SenTestingKit.framework in Frameworks */,
+				C6D942FE1812B5230069D294 /* UIKit.framework in Frameworks */,
+				C6D942FF1812B5230069D294 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6D942CC1812B5230069D294 = {
+			isa = PBXGroup;
+			children = (
+				C6D942DE1812B5230069D294 /* PodcastListener */,
+				C6D943021812B5230069D294 /* PodcastListenerTests */,
+				C6D942D71812B5230069D294 /* Frameworks */,
+				C6D942D61812B5230069D294 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C6D942D61812B5230069D294 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6D942D51812B5230069D294 /* PodcastListener.app */,
+				C6D942FB1812B5230069D294 /* PodcastListenerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6D942D71812B5230069D294 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6D942D81812B5230069D294 /* UIKit.framework */,
+				C6D942DA1812B5230069D294 /* Foundation.framework */,
+				C6D942DC1812B5230069D294 /* CoreGraphics.framework */,
+				C6D942FC1812B5230069D294 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6D942DE1812B5230069D294 /* PodcastListener */ = {
+			isa = PBXGroup;
+			children = (
+				C6D942E71812B5230069D294 /* PLAppDelegate.h */,
+				C6D942E81812B5230069D294 /* PLAppDelegate.m */,
+				C6D942F01812B5230069D294 /* PLViewController.h */,
+				C6D942F11812B5230069D294 /* PLViewController.m */,
+				C6D942F31812B5230069D294 /* PLViewController.xib */,
+				C6D942DF1812B5230069D294 /* Supporting Files */,
+			);
+			path = PodcastListener;
+			sourceTree = "<group>";
+		};
+		C6D942DF1812B5230069D294 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6D942E01812B5230069D294 /* PodcastListener-Info.plist */,
+				C6D942E11812B5230069D294 /* InfoPlist.strings */,
+				C6D942E41812B5230069D294 /* main.m */,
+				C6D942E61812B5230069D294 /* PodcastListener-Prefix.pch */,
+				C6D942EA1812B5230069D294 /* Default.png */,
+				C6D942EC1812B5230069D294 /* Default@2x.png */,
+				C6D942EE1812B5230069D294 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6D943021812B5230069D294 /* PodcastListenerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C6D943081812B5230069D294 /* PodcastListenerTests.h */,
+				C6D943091812B5230069D294 /* PodcastListenerTests.m */,
+				C6D943031812B5230069D294 /* Supporting Files */,
+			);
+			path = PodcastListenerTests;
+			sourceTree = "<group>";
+		};
+		C6D943031812B5230069D294 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6D943041812B5230069D294 /* PodcastListenerTests-Info.plist */,
+				C6D943051812B5230069D294 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6D942D41812B5230069D294 /* PodcastListener */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6D9430D1812B5230069D294 /* Build configuration list for PBXNativeTarget "PodcastListener" */;
+			buildPhases = (
+				C6D942D11812B5230069D294 /* Sources */,
+				C6D942D21812B5230069D294 /* Frameworks */,
+				C6D942D31812B5230069D294 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PodcastListener;
+			productName = PodcastListener;
+			productReference = C6D942D51812B5230069D294 /* PodcastListener.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C6D942FA1812B5230069D294 /* PodcastListenerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6D943101812B5230069D294 /* Build configuration list for PBXNativeTarget "PodcastListenerTests" */;
+			buildPhases = (
+				C6D942F61812B5230069D294 /* Sources */,
+				C6D942F71812B5230069D294 /* Frameworks */,
+				C6D942F81812B5230069D294 /* Resources */,
+				C6D942F91812B5230069D294 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6D943011812B5230069D294 /* PBXTargetDependency */,
+			);
+			name = PodcastListenerTests;
+			productName = PodcastListenerTests;
+			productReference = C6D942FB1812B5230069D294 /* PodcastListenerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6D942CD1812B5230069D294 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PL;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Misha;
+			};
+			buildConfigurationList = C6D942D01812B5230069D294 /* Build configuration list for PBXProject "PodcastListener" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C6D942CC1812B5230069D294;
+			productRefGroup = C6D942D61812B5230069D294 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6D942D41812B5230069D294 /* PodcastListener */,
+				C6D942FA1812B5230069D294 /* PodcastListenerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6D942D31812B5230069D294 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D942E31812B5230069D294 /* InfoPlist.strings in Resources */,
+				C6D942EB1812B5230069D294 /* Default.png in Resources */,
+				C6D942ED1812B5230069D294 /* Default@2x.png in Resources */,
+				C6D942EF1812B5230069D294 /* Default-568h@2x.png in Resources */,
+				C6D942F51812B5230069D294 /* PLViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6D942F81812B5230069D294 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D943071812B5230069D294 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C6D942F91812B5230069D294 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C6D942D11812B5230069D294 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D942E51812B5230069D294 /* main.m in Sources */,
+				C6D942E91812B5230069D294 /* PLAppDelegate.m in Sources */,
+				C6D942F21812B5230069D294 /* PLViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6D942F61812B5230069D294 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D9430A1812B5230069D294 /* PodcastListenerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6D943011812B5230069D294 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6D942D41812B5230069D294 /* PodcastListener */;
+			targetProxy = C6D943001812B5230069D294 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C6D942E11812B5230069D294 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6D942E21812B5230069D294 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C6D942F31812B5230069D294 /* PLViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6D942F41812B5230069D294 /* en */,
+			);
+			name = PLViewController.xib;
+			sourceTree = "<group>";
+		};
+		C6D943051812B5230069D294 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6D943061812B5230069D294 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C6D9430B1812B5230069D294 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C6D9430C1812B5230069D294 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6D9430E1812B5230069D294 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PodcastListener/PodcastListener-Prefix.pch";
+				INFOPLIST_FILE = "PodcastListener/PodcastListener-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C6D9430F1812B5230069D294 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PodcastListener/PodcastListener-Prefix.pch";
+				INFOPLIST_FILE = "PodcastListener/PodcastListener-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C6D943111812B5230069D294 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PodcastListener.app/PodcastListener";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PodcastListener/PodcastListener-Prefix.pch";
+				INFOPLIST_FILE = "PodcastListenerTests/PodcastListenerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C6D943121812B5230069D294 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PodcastListener.app/PodcastListener";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PodcastListener/PodcastListener-Prefix.pch";
+				INFOPLIST_FILE = "PodcastListenerTests/PodcastListenerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C6D942D01812B5230069D294 /* Build configuration list for PBXProject "PodcastListener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6D9430B1812B5230069D294 /* Debug */,
+				C6D9430C1812B5230069D294 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6D9430D1812B5230069D294 /* Build configuration list for PBXNativeTarget "PodcastListener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6D9430E1812B5230069D294 /* Debug */,
+				C6D9430F1812B5230069D294 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C6D943101812B5230069D294 /* Build configuration list for PBXNativeTarget "PodcastListenerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6D943111812B5230069D294 /* Debug */,
+				C6D943121812B5230069D294 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6D942CD1812B5230069D294 /* Project object */;
+}
