@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PLListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface PLListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITextField *urlField;
 
 @end

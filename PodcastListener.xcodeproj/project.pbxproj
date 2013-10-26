@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4830EB06181C01EC00EE25D9 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4830EB05181C01CC00EE25D9 /* libMBProgressHUD.a */; };
+		4830EB08181C0A4E00EE25D9 /* PLPodcastCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4830EB07181C0A4E00EE25D9 /* PLPodcastCellView.xib */; };
+		4830EB0B181C0B8300EE25D9 /* PLPodcastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4830EB0A181C0B8300EE25D9 /* PLPodcastCell.m */; };
+		4830EB0E181C138C00EE25D9 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4830EB0D181C138C00EE25D9 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C6D942D91812B5230069D294 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942D81812B5230069D294 /* UIKit.framework */; };
 		C6D942DB1812B5230069D294 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942DA1812B5230069D294 /* Foundation.framework */; };
 		C6D942DD1812B5230069D294 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942DC1812B5230069D294 /* CoreGraphics.framework */; };
@@ -28,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4830EB04181C01CC00EE25D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4830EB00181C01CC00EE25D9 /* MBProgressHUD.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D286A7491518C70F00E13FB8;
+			remoteInfo = MBProgressHUD;
+		};
 		C6D943001812B5230069D294 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C6D942CD1812B5230069D294 /* Project object */;
@@ -38,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4830EB00181C01CC00EE25D9 /* MBProgressHUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MBProgressHUD.xcodeproj; path = "../../Downloads/MBProgressHUD-master/MBProgressHUD.xcodeproj"; sourceTree = "<group>"; };
+		4830EB07181C0A4E00EE25D9 /* PLPodcastCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PLPodcastCellView.xib; sourceTree = "<group>"; };
+		4830EB09181C0B8300EE25D9 /* PLPodcastCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLPodcastCell.h; path = PodcastListener/PLPodcastCell.h; sourceTree = "<group>"; };
+		4830EB0A181C0B8300EE25D9 /* PLPodcastCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLPodcastCell.m; path = PodcastListener/PLPodcastCell.m; sourceTree = "<group>"; };
+		4830EB0C181C138C00EE25D9 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		4830EB0D181C138C00EE25D9 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		4830EB0F181C18DD00EE25D9 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		C6D942D51812B5230069D294 /* PodcastListener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodcastListener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D942D81812B5230069D294 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C6D942DA1812B5230069D294 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -70,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4830EB06181C01EC00EE25D9 /* libMBProgressHUD.a in Frameworks */,
 				C6D942D91812B5230069D294 /* UIKit.framework in Frameworks */,
 				C6D942DB1812B5230069D294 /* Foundation.framework in Frameworks */,
 				C6D942DD1812B5230069D294 /* CoreGraphics.framework in Frameworks */,
@@ -89,9 +108,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4830EB01181C01CC00EE25D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4830EB05181C01CC00EE25D9 /* libMBProgressHUD.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C6D942CC1812B5230069D294 = {
 			isa = PBXGroup;
 			children = (
+				4830EB0F181C18DD00EE25D9 /* libxml2.dylib */,
+				4830EB09181C0B8300EE25D9 /* PLPodcastCell.h */,
+				4830EB0A181C0B8300EE25D9 /* PLPodcastCell.m */,
+				4830EB07181C0A4E00EE25D9 /* PLPodcastCellView.xib */,
 				C6D942DE1812B5230069D294 /* PodcastListener */,
 				C6D943021812B5230069D294 /* PodcastListenerTests */,
 				C6D942D71812B5230069D294 /* Frameworks */,
@@ -122,6 +153,8 @@
 		C6D942DE1812B5230069D294 /* PodcastListener */ = {
 			isa = PBXGroup;
 			children = (
+				4830EB0C181C138C00EE25D9 /* GDataXMLNode.h */,
+				4830EB0D181C138C00EE25D9 /* GDataXMLNode.m */,
 				C6D942E71812B5230069D294 /* PLAppDelegate.h */,
 				C6D942E81812B5230069D294 /* PLAppDelegate.m */,
 				C6D942F01812B5230069D294 /* PLListViewController.h */,
@@ -131,6 +164,7 @@
 				C6D943131812B5EB0069D294 /* PLDetailViewController.h */,
 				C6D943141812B5EB0069D294 /* PLDetailViewController.m */,
 				C6D943151812B5EB0069D294 /* PLDetailViewController.xib */,
+				4830EB00181C01CC00EE25D9 /* MBProgressHUD.xcodeproj */,
 			);
 			path = PodcastListener;
 			sourceTree = "<group>";
@@ -227,6 +261,12 @@
 			mainGroup = C6D942CC1812B5230069D294;
 			productRefGroup = C6D942D61812B5230069D294 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4830EB01181C01CC00EE25D9 /* Products */;
+					ProjectRef = 4830EB00181C01CC00EE25D9 /* MBProgressHUD.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C6D942D41812B5230069D294 /* PodcastListener */,
@@ -234,6 +274,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4830EB05181C01CC00EE25D9 /* libMBProgressHUD.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMBProgressHUD.a;
+			remoteRef = 4830EB04181C01CC00EE25D9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C6D942D31812B5230069D294 /* Resources */ = {
@@ -246,6 +296,7 @@
 				C6D942EF1812B5230069D294 /* Default-568h@2x.png in Resources */,
 				C6D942F51812B5230069D294 /* PLListViewController.xib in Resources */,
 				C6D943171812B5EB0069D294 /* PLDetailViewController.xib in Resources */,
+				4830EB08181C0A4E00EE25D9 /* PLPodcastCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +335,8 @@
 				C6D942E91812B5230069D294 /* PLAppDelegate.m in Sources */,
 				C6D942F21812B5230069D294 /* PLListViewController.m in Sources */,
 				C6D943161812B5EB0069D294 /* PLDetailViewController.m in Sources */,
+				4830EB0B181C0B8300EE25D9 /* PLPodcastCell.m in Sources */,
+				4830EB0E181C138C00EE25D9 /* GDataXMLNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,8 +411,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				New_Setting = "";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lxml2";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -382,8 +439,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				New_Setting = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-lxml2";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -464,6 +525,7 @@
 				C6D9430F1812B5230069D294 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6D943101812B5230069D294 /* Build configuration list for PBXNativeTarget "PodcastListenerTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +534,7 @@
 				C6D943121812B5230069D294 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
