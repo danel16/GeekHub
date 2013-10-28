@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4830EB06181C01EC00EE25D9 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4830EB05181C01CC00EE25D9 /* libMBProgressHUD.a */; };
 		4830EB08181C0A4E00EE25D9 /* PLPodcastCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4830EB07181C0A4E00EE25D9 /* PLPodcastCellView.xib */; };
 		4830EB0B181C0B8300EE25D9 /* PLPodcastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4830EB0A181C0B8300EE25D9 /* PLPodcastCell.m */; };
 		4830EB0E181C138C00EE25D9 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4830EB0D181C138C00EE25D9 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -29,16 +28,10 @@
 		C6D9430A1812B5230069D294 /* PodcastListenerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D943091812B5230069D294 /* PodcastListenerTests.m */; };
 		C6D943161812B5EB0069D294 /* PLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D943141812B5EB0069D294 /* PLDetailViewController.m */; };
 		C6D943171812B5EB0069D294 /* PLDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D943151812B5EB0069D294 /* PLDetailViewController.xib */; };
+		C6E02805181E641300A306A4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E02804181E641300A306A4 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4830EB04181C01CC00EE25D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4830EB00181C01CC00EE25D9 /* MBProgressHUD.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D286A7491518C70F00E13FB8;
-			remoteInfo = MBProgressHUD;
-		};
 		C6D943001812B5230069D294 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C6D942CD1812B5230069D294 /* Project object */;
@@ -49,7 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4830EB00181C01CC00EE25D9 /* MBProgressHUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MBProgressHUD.xcodeproj; path = "../../Downloads/MBProgressHUD-master/MBProgressHUD.xcodeproj"; sourceTree = "<group>"; };
 		4830EB07181C0A4E00EE25D9 /* PLPodcastCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PLPodcastCellView.xib; sourceTree = "<group>"; };
 		4830EB09181C0B8300EE25D9 /* PLPodcastCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLPodcastCell.h; path = PodcastListener/PLPodcastCell.h; sourceTree = "<group>"; };
 		4830EB0A181C0B8300EE25D9 /* PLPodcastCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLPodcastCell.m; path = PodcastListener/PLPodcastCell.m; sourceTree = "<group>"; };
@@ -81,6 +73,8 @@
 		C6D943131812B5EB0069D294 /* PLDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLDetailViewController.h; sourceTree = "<group>"; };
 		C6D943141812B5EB0069D294 /* PLDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLDetailViewController.m; sourceTree = "<group>"; };
 		C6D943151812B5EB0069D294 /* PLDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PLDetailViewController.xib; sourceTree = "<group>"; };
+		C6E02803181E641300A306A4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		C6E02804181E641300A306A4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4830EB06181C01EC00EE25D9 /* libMBProgressHUD.a in Frameworks */,
 				C6D942D91812B5230069D294 /* UIKit.framework in Frameworks */,
 				C6D942DB1812B5230069D294 /* Foundation.framework in Frameworks */,
 				C6D942DD1812B5230069D294 /* CoreGraphics.framework in Frameworks */,
@@ -108,14 +101,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4830EB01181C01CC00EE25D9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4830EB05181C01CC00EE25D9 /* libMBProgressHUD.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		C6D942CC1812B5230069D294 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +138,8 @@
 		C6D942DE1812B5230069D294 /* PodcastListener */ = {
 			isa = PBXGroup;
 			children = (
+				C6E02803181E641300A306A4 /* MBProgressHUD.h */,
+				C6E02804181E641300A306A4 /* MBProgressHUD.m */,
 				4830EB0C181C138C00EE25D9 /* GDataXMLNode.h */,
 				4830EB0D181C138C00EE25D9 /* GDataXMLNode.m */,
 				C6D942E71812B5230069D294 /* PLAppDelegate.h */,
@@ -164,7 +151,6 @@
 				C6D943131812B5EB0069D294 /* PLDetailViewController.h */,
 				C6D943141812B5EB0069D294 /* PLDetailViewController.m */,
 				C6D943151812B5EB0069D294 /* PLDetailViewController.xib */,
-				4830EB00181C01CC00EE25D9 /* MBProgressHUD.xcodeproj */,
 			);
 			path = PodcastListener;
 			sourceTree = "<group>";
@@ -261,12 +247,6 @@
 			mainGroup = C6D942CC1812B5230069D294;
 			productRefGroup = C6D942D61812B5230069D294 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4830EB01181C01CC00EE25D9 /* Products */;
-					ProjectRef = 4830EB00181C01CC00EE25D9 /* MBProgressHUD.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				C6D942D41812B5230069D294 /* PodcastListener */,
@@ -274,16 +254,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		4830EB05181C01CC00EE25D9 /* libMBProgressHUD.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libMBProgressHUD.a;
-			remoteRef = 4830EB04181C01CC00EE25D9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C6D942D31812B5230069D294 /* Resources */ = {
@@ -337,6 +307,7 @@
 				C6D943161812B5EB0069D294 /* PLDetailViewController.m in Sources */,
 				4830EB0B181C0B8300EE25D9 /* PLPodcastCell.m in Sources */,
 				4830EB0E181C138C00EE25D9 /* GDataXMLNode.m in Sources */,
+				C6E02805181E641300A306A4 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 #import "PLListViewController.h"
 #import "PLDetailViewController.h"
-#import <MBProgressHUD/MBProgressHUD.h>
+#import "MBProgressHUD.h"
 #import "PLPodcastCell.h"
 #import "GDataXMLNode.h"
 
