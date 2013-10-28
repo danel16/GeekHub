@@ -62,8 +62,15 @@
     GDataXMLElement *item = self.items[indexPath.row];
     NSArray *titles = [item elementsForName:@"title"];
     if (titles.count > 0) {
-        GDataXMLElement *title= titles[0];
+        GDataXMLElement *title = titles[0];
         cell.titleLabel.text = title.stringValue;
+    }
+    
+    NSArray *images = [item elementsForName:@"itunes:image"];
+    if (images.count > 0) {
+        GDataXMLElement *image = images[0];
+        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[[image attributeForName:@"href"] stringValue]]];
+        cell.podcastImage.image = [UIImage imageWithData:imageData];
     }
     return cell;
 }
