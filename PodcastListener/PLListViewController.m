@@ -11,11 +11,13 @@
 #import "MBProgressHUD.h"
 #import "PLPodcastCell.h"
 #import "GDataXMLNode.h"
+#import "Reachability.h"
 
 @interface PLListViewController ()
 
 @property (nonatomic, strong) GDataXMLDocument *doc;
 @property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong) MBProgressHUD *hud;
 
 @end
 
@@ -85,10 +87,9 @@
 -(BOOL) textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     if ([self checkConnection]) {
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        hud.labelText = @"Please wait. Loading";
+        self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        self.hud.labelText = @"Please wait. Loading";
         [self getData];
-        [hud hide:YES];
     } else {
         [[[UIAlertView alloc] initWithTitle:@"Error" message:@"No internet connection" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
     }
@@ -99,26 +100,23 @@
 -(void) getData {
     NSURL *requestUrl = [NSURL URLWithString:self.urlField.text];
     NSURLRequest *request = [NSURLRequest requestWithURL:requestUrl];
-    NSURLResponse *response = nil;
-    NSError *error = nil;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    if (error) {
-        NSLog(@"%@", error);
-    }
-    
-    self.doc = [[GDataXMLDocument alloc] initWithData:responseData options:0 error:&error];
-    _items = [self.doc nodesForXPath:@"//channel/item" error:&error];
-    [self.tableView reloadData];
+
+    [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            self.doc = [[GDataXMLDocument alloc] initWithData:data options:0 error:&error];
+            _items = [self.doc nodesForXPath:@"//channel/item" error:&error];
+            [self.tableView reloadData];
+            [self.hud hide:YES];
+        }
+    }];
+
 }
 
 -(BOOL) checkConnection {
-    NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    [request setHTTPMethod:@"HEAD"];
-    NSHTTPURLResponse *response = nil;
-    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:NULL];
-    
-    return ([response statusCode] == 200) ? YES : NO;
+    Reachability* wifiReach = [Reachability reachabilityForInternetConnection];
+    return wifiReach.isReachable;
 }
 
 @end

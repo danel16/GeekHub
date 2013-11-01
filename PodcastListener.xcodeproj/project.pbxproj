@@ -10,6 +10,8 @@
 		4830EB08181C0A4E00EE25D9 /* PLPodcastCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4830EB07181C0A4E00EE25D9 /* PLPodcastCellView.xib */; };
 		4830EB0B181C0B8300EE25D9 /* PLPodcastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4830EB0A181C0B8300EE25D9 /* PLPodcastCell.m */; };
 		4830EB0E181C138C00EE25D9 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4830EB0D181C138C00EE25D9 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C62802721823EC5F001A2604 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C62802711823EC5F001A2604 /* Reachability.m */; };
+		C62802741823ECBF001A2604 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62802731823ECBF001A2604 /* SystemConfiguration.framework */; };
 		C6D942D91812B5230069D294 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942D81812B5230069D294 /* UIKit.framework */; };
 		C6D942DB1812B5230069D294 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942DA1812B5230069D294 /* Foundation.framework */; };
 		C6D942DD1812B5230069D294 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942DC1812B5230069D294 /* CoreGraphics.framework */; };
@@ -48,6 +50,9 @@
 		4830EB0C181C138C00EE25D9 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		4830EB0D181C138C00EE25D9 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		4830EB0F181C18DD00EE25D9 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		C62802701823EC5F001A2604 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C62802711823EC5F001A2604 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C62802731823ECBF001A2604 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C6D942D51812B5230069D294 /* PodcastListener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodcastListener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D942D81812B5230069D294 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C6D942DA1812B5230069D294 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -82,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C62802741823ECBF001A2604 /* SystemConfiguration.framework in Frameworks */,
 				C6D942D91812B5230069D294 /* UIKit.framework in Frameworks */,
 				C6D942DB1812B5230069D294 /* Foundation.framework in Frameworks */,
 				C6D942DD1812B5230069D294 /* CoreGraphics.framework in Frameworks */,
@@ -104,6 +110,7 @@
 		C6D942CC1812B5230069D294 = {
 			isa = PBXGroup;
 			children = (
+				C62802731823ECBF001A2604 /* SystemConfiguration.framework */,
 				4830EB0F181C18DD00EE25D9 /* libxml2.dylib */,
 				4830EB09181C0B8300EE25D9 /* PLPodcastCell.h */,
 				4830EB0A181C0B8300EE25D9 /* PLPodcastCell.m */,
@@ -138,6 +145,8 @@
 		C6D942DE1812B5230069D294 /* PodcastListener */ = {
 			isa = PBXGroup;
 			children = (
+				C62802701823EC5F001A2604 /* Reachability.h */,
+				C62802711823EC5F001A2604 /* Reachability.m */,
 				C6E02803181E641300A306A4 /* MBProgressHUD.h */,
 				C6E02804181E641300A306A4 /* MBProgressHUD.m */,
 				4830EB0C181C138C00EE25D9 /* GDataXMLNode.h */,
@@ -308,6 +317,7 @@
 				4830EB0B181C0B8300EE25D9 /* PLPodcastCell.m in Sources */,
 				4830EB0E181C138C00EE25D9 /* GDataXMLNode.m in Sources */,
 				C6E02805181E641300A306A4 /* MBProgressHUD.m in Sources */,
+				C62802721823EC5F001A2604 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
