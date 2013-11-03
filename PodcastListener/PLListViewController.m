@@ -12,6 +12,7 @@
 #import "PLPodcastCell.h"
 #import "GDataXMLNode.h"
 #import "Reachability.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface PLListViewController ()
 
@@ -71,8 +72,8 @@
     NSArray *images = [item elementsForName:@"itunes:image"];
     if (images.count > 0) {
         GDataXMLElement *image = images[0];
-        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[[image attributeForName:@"href"] stringValue]]];
-        cell.podcastImage.image = [UIImage imageWithData:imageData];
+        NSURL *imageUrl = [NSURL URLWithString:[[image attributeForName:@"href"] stringValue]];
+        [cell.podcastImage setImageWithURL:imageUrl];
     }
     return cell;
 }

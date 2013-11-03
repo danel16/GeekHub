@@ -12,6 +12,8 @@
 		4830EB0E181C138C00EE25D9 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4830EB0D181C138C00EE25D9 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C62802721823EC5F001A2604 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C62802711823EC5F001A2604 /* Reachability.m */; };
 		C62802741823ECBF001A2604 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62802731823ECBF001A2604 /* SystemConfiguration.framework */; };
+		C67346F21826303D0066C6ED /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C67346F11826303D0066C6ED /* SDWebImage.framework */; };
+		C67346F4182630B00066C6ED /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C67346F3182630B00066C6ED /* ImageIO.framework */; };
 		C6D942D91812B5230069D294 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942D81812B5230069D294 /* UIKit.framework */; };
 		C6D942DB1812B5230069D294 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942DA1812B5230069D294 /* Foundation.framework */; };
 		C6D942DD1812B5230069D294 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942DC1812B5230069D294 /* CoreGraphics.framework */; };
@@ -53,6 +55,8 @@
 		C62802701823EC5F001A2604 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		C62802711823EC5F001A2604 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C62802731823ECBF001A2604 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C67346F11826303D0066C6ED /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
+		C67346F3182630B00066C6ED /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		C6D942D51812B5230069D294 /* PodcastListener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodcastListener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D942D81812B5230069D294 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C6D942DA1812B5230069D294 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,10 +91,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C67346F4182630B00066C6ED /* ImageIO.framework in Frameworks */,
 				C62802741823ECBF001A2604 /* SystemConfiguration.framework in Frameworks */,
 				C6D942D91812B5230069D294 /* UIKit.framework in Frameworks */,
 				C6D942DB1812B5230069D294 /* Foundation.framework in Frameworks */,
 				C6D942DD1812B5230069D294 /* CoreGraphics.framework in Frameworks */,
+				C67346F21826303D0066C6ED /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +116,8 @@
 		C6D942CC1812B5230069D294 = {
 			isa = PBXGroup;
 			children = (
+				C67346F3182630B00066C6ED /* ImageIO.framework */,
+				C67346F11826303D0066C6ED /* SDWebImage.framework */,
 				C62802731823ECBF001A2604 /* SystemConfiguration.framework */,
 				4830EB0F181C18DD00EE25D9 /* libxml2.dylib */,
 				4830EB09181C0B8300EE25D9 /* PLPodcastCell.h */,
@@ -434,9 +442,17 @@
 		C6D9430E1812B5230069D294 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PodcastListener/PodcastListener-Prefix.pch";
 				INFOPLIST_FILE = "PodcastListener/PodcastListener-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -445,9 +461,17 @@
 		C6D9430F1812B5230069D294 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PodcastListener/PodcastListener-Prefix.pch";
 				INFOPLIST_FILE = "PodcastListener/PodcastListener-Info.plist";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
