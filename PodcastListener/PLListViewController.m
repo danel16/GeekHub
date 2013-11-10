@@ -102,7 +102,7 @@
     NSURL *requestUrl = [NSURL URLWithString:self.urlField.text];
     NSURLRequest *request = [NSURLRequest requestWithURL:requestUrl];
 
-    [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         if (error) {
             NSLog(@"%@", error);
         } else {
