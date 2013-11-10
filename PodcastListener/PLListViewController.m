@@ -98,7 +98,8 @@
 
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         if (error) {
-            NSLog(@"%@", error);
+            [self.hud hide:YES];
+            [[[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
         } else {
             self.doc = [[GDataXMLDocument alloc] initWithData:data options:0 error:&error];
             NSArray *XMLItems = [self.doc nodesForXPath:@"//channel/item" error:&error];

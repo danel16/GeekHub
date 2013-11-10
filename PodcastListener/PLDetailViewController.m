@@ -7,6 +7,7 @@
 //
 
 #import "PLDetailViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface PLDetailViewController ()
 
@@ -28,6 +29,10 @@
     [super viewDidLoad];
     self.detailLabel.text = self.labelText;
     [self.detailLabel sizeToFit];
+    self.podcastImageView.image = [UIImage imageNamed:@"navigation_background.png"];
+    [self.podcastImageView.layer setMasksToBounds:YES];
+    [self.podcastImageView.layer setCornerRadius:5.0f];
+    
     // Do any additional setup after loading the view from its nib.
 }
 

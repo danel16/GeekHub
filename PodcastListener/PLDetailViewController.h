@@ -12,5 +12,7 @@
 
 @property (nonatomic, strong) IBOutlet UILabel *detailLabel;
 @property (nonatomic, strong) NSString *labelText;
+@property (weak, nonatomic) IBOutlet UIButton *prevButton;
+@property (weak, nonatomic) IBOutlet UIImageView *podcastImageView;
 
 @end
