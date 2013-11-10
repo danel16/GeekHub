@@ -13,11 +13,13 @@
 #import "GDataXMLNode.h"
 #import "Reachability.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "PLPodcast+ParseResponse.h"
+#import "PLPodcast.h"
 
 @interface PLListViewController ()
 
 @property (nonatomic, strong) GDataXMLDocument *doc;
-@property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong) NSMutableArray *items;
 @property (nonatomic, strong) MBProgressHUD *hud;
 
 @end
@@ -28,6 +30,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    _items = [[NSMutableArray alloc] init];
     self.urlField.delegate = self;
     [self.urlField setReturnKeyType:UIReturnKeyDone];
     [self.tableView registerNib:[UINib nibWithNibName:@"PLPodcastCellView" bundle:nil] forCellReuseIdentifier:@"Cell"];
@@ -62,19 +65,10 @@
     if (cell == nil) {
         cell = [[PLPodcastCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    GDataXMLElement *item = self.items[indexPath.row];
-    NSArray *titles = [item elementsForName:@"title"];
-    if (titles.count > 0) {
-        GDataXMLElement *title = titles[0];
-        cell.titleLabel.text = title.stringValue;
-    }
-    
-    NSArray *images = [item elementsForName:@"itunes:image"];
-    if (images.count > 0) {
-        GDataXMLElement *image = images[0];
-        NSURL *imageUrl = [NSURL URLWithString:[[image attributeForName:@"href"] stringValue]];
-        [cell.podcastImage setImageWithURL:imageUrl];
-    }
+    PLPodcast *podcast = _items[indexPath.row];
+    cell.titleLabel.text = podcast.title;
+    NSURL *imagaeURL = [NSURL URLWithString:podcast.imageUrl];
+    [cell.podcastImage setImageWithURL:imagaeURL];
     return cell;
 }
 
@@ -107,7 +101,11 @@
             NSLog(@"%@", error);
         } else {
             self.doc = [[GDataXMLDocument alloc] initWithData:data options:0 error:&error];
-            _items = [self.doc nodesForXPath:@"//channel/item" error:&error];
+            NSArray *XMLItems = [self.doc nodesForXPath:@"//channel/item" error:&error];
+            for (GDataXMLElement *item in XMLItems) {
+                PLPodcast *podcast = [PLPodcast parseFromXML:item];
+                [self.items addObject:podcast];
+            }
             [self.tableView reloadData];
             [self.hud hide:YES];
         }
