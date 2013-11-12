@@ -19,6 +19,12 @@
     self.viewController = [[PLListViewController alloc] initWithNibName:@"PLListViewController" bundle:nil];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     self.window.rootViewController = self.navigationController;
+    
+    UIImage *navBackgroundImage = [UIImage imageNamed:@"navigation_background.png"];
+    [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
+    
+    UIImage *backButtonImage = [UIImage imageNamed:@"navigation_bar_back_button.png"];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     [self.window makeKeyAndVisible];
     return YES;
 }
