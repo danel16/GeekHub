@@ -8,6 +8,8 @@
 
 #import "PLDetailViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "PLPodcast.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface PLDetailViewController ()
 
@@ -21,17 +23,26 @@
     if (self) {
         // Custom initialization
     }
+
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.detailLabel.text = self.labelText;
+    
+    self.detailLabel.text = self.podcast.title;
     [self.detailLabel sizeToFit];
-    self.podcastImageView.image = [UIImage imageNamed:@"navigation_background.png"];
+    
+//    self.podcastImageView.image = [UIImage imageNamed:@"navigation_background"];
+    [self.podcastImageView setImageWithURL:[NSURL URLWithString:self.podcast.imageUrl]];
     [self.podcastImageView.layer setMasksToBounds:YES];
-    [self.podcastImageView.layer setCornerRadius:5.0f];
+    [self.podcastImageView.layer setCornerRadius:6.0f];
+    
+    [self.progressSlider setThumbImage:[UIImage imageNamed:@"slider-thumb-image"] forState:UIControlStateNormal];
+    [self.progressSlider setThumbImage:[UIImage imageNamed:@"slider-thumb-image"] forState:UIControlStateHighlighted];
+    [self.progressSlider setMinimumTrackImage:[[UIImage imageNamed:@"slider-progress"] stretchableImageWithLeftCapWidth:9 topCapHeight:0] forState:UIControlStateNormal];
+    [self.progressSlider setMaximumTrackImage:[[UIImage imageNamed:@"slider-base-progress"] stretchableImageWithLeftCapWidth:9 topCapHeight:0] forState:UIControlStateNormal];
     
     // Do any additional setup after loading the view from its nib.
 }

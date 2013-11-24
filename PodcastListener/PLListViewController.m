@@ -74,8 +74,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     PLDetailViewController *detailView = [[PLDetailViewController alloc] initWithNibName:@"PLDetailViewController" bundle:nil];
-    PLPodcastCell *cell = (PLPodcastCell*)[tableView cellForRowAtIndexPath:indexPath];
-    detailView.labelText = cell.titleLabel.text;
+    detailView.podcast = _items[indexPath.row];
     [self.navigationController pushViewController:detailView animated:YES];
 }
 

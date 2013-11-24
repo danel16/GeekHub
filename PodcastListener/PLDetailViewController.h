@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PLPodcast.h"
 
 @interface PLDetailViewController : UIViewController
 
 @property (nonatomic, strong) IBOutlet UILabel *detailLabel;
-@property (nonatomic, strong) NSString *labelText;
 @property (weak, nonatomic) IBOutlet UIButton *prevButton;
 @property (weak, nonatomic) IBOutlet UIImageView *podcastImageView;
+@property (weak, nonatomic) IBOutlet UISlider *progressSlider;
+@property (strong, nonatomic) PLPodcast *podcast;
 
 @end
