@@ -34,6 +34,7 @@
 		C6C98864184226E400AF639B /* slider-base-proress@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C9885C184226E400AF639B /* slider-base-proress@2x.png */; };
 		C6C98865184226E400AF639B /* slider-thumb-image.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C9885D184226E400AF639B /* slider-thumb-image.png */; };
 		C6C98866184226E400AF639B /* slider-thumb-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C9885E184226E400AF639B /* slider-thumb-image@2x.png */; };
+		C6C9886A1843B8FF00AF639B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C988691843B8FF00AF639B /* AVFoundation.framework */; };
 		C6CD75D3182F5AC0001B5870 /* PLPodcast.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD75D2182F5AC0001B5870 /* PLPodcast.m */; };
 		C6CD75D9182F625E001B5870 /* PLPodcast+ParseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD75D8182F625E001B5870 /* PLPodcast+ParseResponse.m */; };
 		C6D942D91812B5230069D294 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942D81812B5230069D294 /* UIKit.framework */; };
@@ -99,6 +100,7 @@
 		C6C9885C184226E400AF639B /* slider-base-proress@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-base-proress@2x.png"; sourceTree = "<group>"; };
 		C6C9885D184226E400AF639B /* slider-thumb-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-thumb-image.png"; sourceTree = "<group>"; };
 		C6C9885E184226E400AF639B /* slider-thumb-image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-thumb-image@2x.png"; sourceTree = "<group>"; };
+		C6C988691843B8FF00AF639B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C6CD75D1182F5AC0001B5870 /* PLPodcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPodcast.h; sourceTree = "<group>"; };
 		C6CD75D2182F5AC0001B5870 /* PLPodcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPodcast.m; sourceTree = "<group>"; };
 		C6CD75D7182F625E001B5870 /* PLPodcast+ParseResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PLPodcast+ParseResponse.h"; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C9886A1843B8FF00AF639B /* AVFoundation.framework in Frameworks */,
 				C67346F4182630B00066C6ED /* ImageIO.framework in Frameworks */,
 				C62802741823ECBF001A2604 /* SystemConfiguration.framework in Frameworks */,
 				C6D942D91812B5230069D294 /* UIKit.framework in Frameworks */,
@@ -198,6 +201,7 @@
 		C6D942CC1812B5230069D294 = {
 			isa = PBXGroup;
 			children = (
+				C6C988691843B8FF00AF639B /* AVFoundation.framework */,
 				C67346F3182630B00066C6ED /* ImageIO.framework */,
 				C67346F11826303D0066C6ED /* SDWebImage.framework */,
 				C62802731823ECBF001A2604 /* SystemConfiguration.framework */,

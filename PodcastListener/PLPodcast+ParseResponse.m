@@ -26,6 +26,12 @@
         parsedPodcast.imageUrl = [[image attributeForName:@"href"] stringValue];
     }
     
+    NSArray *audioUrls = [item elementsForName:@"enclosure"];
+    if (audioUrls.count > 0) {
+        GDataXMLElement *audioUrl = audioUrls[0];
+        parsedPodcast.url = [[audioUrl attributeForName:@"url"] stringValue];
+    }
+    
     return parsedPodcast;
 }
 

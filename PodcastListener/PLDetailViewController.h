@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PLPodcast.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface PLDetailViewController : UIViewController
 
@@ -16,5 +17,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *podcastImageView;
 @property (weak, nonatomic) IBOutlet UISlider *progressSlider;
 @property (strong, nonatomic) PLPodcast *podcast;
+- (IBAction)playButtonTapped:(id)sender;
 
 @end

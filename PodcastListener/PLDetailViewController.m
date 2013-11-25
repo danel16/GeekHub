@@ -10,8 +10,11 @@
 #import <QuartzCore/QuartzCore.h>
 #import "PLPodcast.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface PLDetailViewController ()
+@interface PLDetailViewController (){
+    AVPlayer *player;
+}
 
 @end
 
@@ -34,7 +37,13 @@
     self.detailLabel.text = self.podcast.title;
     [self.detailLabel sizeToFit];
     
-//    self.podcastImageView.image = [UIImage imageNamed:@"navigation_background"];
+    NSURL *podcastUrl = [NSURL URLWithString:self.podcast.url];
+    AVAsset *asset = [AVURLAsset URLAssetWithURL:podcastUrl options:nil];
+    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:asset];
+    player = [AVPlayer playerWithPlayerItem:playerItem];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+    [player addObserver:self forKeyPath:@"status" options:0 context:nil];
+    
     [self.podcastImageView setImageWithURL:[NSURL URLWithString:self.podcast.imageUrl]];
     [self.podcastImageView.layer setMasksToBounds:YES];
     [self.podcastImageView.layer setCornerRadius:6.0f];
@@ -44,7 +53,30 @@
     [self.progressSlider setMinimumTrackImage:[[UIImage imageNamed:@"slider-progress"] stretchableImageWithLeftCapWidth:9 topCapHeight:0] forState:UIControlStateNormal];
     [self.progressSlider setMaximumTrackImage:[[UIImage imageNamed:@"slider-base-progress"] stretchableImageWithLeftCapWidth:9 topCapHeight:0] forState:UIControlStateNormal];
     
+    
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    
+    if (object == player && [keyPath isEqualToString:@"status"]) {
+        if (player.status == AVPlayerStatusFailed) {
+            NSLog(@"AVPlayer Failed");
+        } else if (player.status == AVPlayerStatusReadyToPlay) {
+            NSLog(@"AVPlayer Ready to Play");
+            [player play];
+        } else if (player.status == AVPlayerItemStatusUnknown) {
+            NSLog(@"AVPlayer Unknown");
+        }
+    }
+}
+
+-(void)playButtonTapped:(id)sender {
+    if (player.rate == 1.0) {
+        [player pause];
+    } else {
+        [player play];
+    }
 }
 
 - (void)didReceiveMemoryWarning
