@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PLPodcast.h"
+#import "PLPodcastItem.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface PLDetailViewController : UIViewController
@@ -16,7 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *prevButton;
 @property (weak, nonatomic) IBOutlet UIImageView *podcastImageView;
 @property (weak, nonatomic) IBOutlet UISlider *progressSlider;
-@property (strong, nonatomic) PLPodcast *podcast;
+@property (strong, nonatomic) PLPodcastItem *podcast;
 - (IBAction)playButtonTapped:(id)sender;
+- (IBAction)seekForward:(id)sender;
 
 @end

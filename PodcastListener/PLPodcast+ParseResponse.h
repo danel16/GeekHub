@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Misha. All rights reserved.
 //
 
-#import "PLPodcast.h"
+#import "PLPodcastItem.h"
 #import "GDataXMLNode.h"
 
-@interface PLPodcast (ParseResponse)
+@interface PLPodcastItem (ParseResponse)
 
-+(PLPodcast*) parseFromXML: (GDataXMLElement *)item;
++(PLPodcastItem*) parseFromXML: (GDataXMLElement *)item;
 
 @end

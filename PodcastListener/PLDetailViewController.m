@@ -8,7 +8,7 @@
 
 #import "PLDetailViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "PLPodcast.h"
+#import "PLPodcastItem.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <AVFoundation/AVFoundation.h>
 
@@ -77,6 +77,11 @@
     } else {
         [player play];
     }
+}
+
+- (IBAction)seekForward:(id)sender {
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

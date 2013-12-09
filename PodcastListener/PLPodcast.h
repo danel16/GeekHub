@@ -10,8 +10,6 @@
 
 @interface PLPodcast : NSObject
 
-@property (nonatomic, strong) NSString *url;
-@property (nonatomic, strong) NSString *imageUrl;
-@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSMutableArray *items;
 
 @end

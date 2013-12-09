@@ -10,8 +10,6 @@
 
 @implementation PLPodcast
 
-@synthesize title;
-@synthesize url;
-@synthesize imageUrl;
+@synthesize items;
 
 @end

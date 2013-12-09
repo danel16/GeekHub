@@ -15,6 +15,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "PLPodcast+ParseResponse.h"
 #import "PLPodcast.h"
+#import "PLAPIClient.h"
 
 @interface PLListViewController ()
 
@@ -34,6 +35,7 @@
     self.urlField.delegate = self;
     [self.urlField setReturnKeyType:UIReturnKeyDone];
     [self.tableView registerNib:[UINib nibWithNibName:@"PLPodcastCellView" bundle:nil] forCellReuseIdentifier:@"Cell"];
+    
 
 }
 
@@ -65,7 +67,7 @@
     if (cell == nil) {
         cell = [[PLPodcastCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    PLPodcast *podcast = _items[indexPath.row];
+    PLPodcastItem *podcast = _items[indexPath.row];
     cell.titleLabel.text = podcast.title;
     NSURL *imagaeURL = [NSURL URLWithString:podcast.imageUrl];
     [cell.podcastImage setImageWithURL:imagaeURL];
@@ -83,34 +85,17 @@
     if ([self checkConnection]) {
         self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         self.hud.labelText = @"Please wait. Loading";
-        [self getData];
+        NSURL *requestUrl = [NSURL URLWithString:self.urlField.text];
+        [PLAPIClient podcastFromURL:requestUrl withCompletion:^(PLPodcast * podcasts) {
+            self.items = podcasts.items;
+            [self.tableView reloadData];
+            [self.hud hide:YES];
+        }];
     } else {
         [[[UIAlertView alloc] initWithTitle:@"Error" message:@"No internet connection" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
     }
     
     return YES;
-}
-
--(void) getData {
-    NSURL *requestUrl = [NSURL URLWithString:self.urlField.text];
-    NSURLRequest *request = [NSURLRequest requestWithURL:requestUrl];
-
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-        if (error) {
-            [self.hud hide:YES];
-            [[[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
-        } else {
-            self.doc = [[GDataXMLDocument alloc] initWithData:data options:0 error:&error];
-            NSArray *XMLItems = [self.doc nodesForXPath:@"//channel/item" error:&error];
-            for (GDataXMLElement *item in XMLItems) {
-                PLPodcast *podcast = [PLPodcast parseFromXML:item];
-                [self.items addObject:podcast];
-            }
-            [self.tableView reloadData];
-            [self.hud hide:YES];
-        }
-    }];
-
 }
 
 -(BOOL) checkConnection {

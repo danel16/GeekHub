@@ -9,10 +9,10 @@
 #import "PLPodcast+ParseResponse.h"
 #import "GDataXMLNode.h"
 
-@implementation PLPodcast (ParseResponse)
+@implementation PLPodcastItem (ParseResponse)
 
-+(PLPodcast*) parseFromXML: (GDataXMLElement *)item {
-    PLPodcast *parsedPodcast = [[PLPodcast alloc] init];
++(PLPodcastItem*) parseFromXML: (GDataXMLElement *)item {
+    PLPodcastItem *parsedPodcast = [[PLPodcastItem alloc] init];
     
     NSArray *titles = [item elementsForName:@"title"];
     if (titles.count > 0) {

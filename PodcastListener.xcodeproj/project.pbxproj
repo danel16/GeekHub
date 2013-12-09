@@ -35,6 +35,8 @@
 		C6C98865184226E400AF639B /* slider-thumb-image.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C9885D184226E400AF639B /* slider-thumb-image.png */; };
 		C6C98866184226E400AF639B /* slider-thumb-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C9885E184226E400AF639B /* slider-thumb-image@2x.png */; };
 		C6C9886A1843B8FF00AF639B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C988691843B8FF00AF639B /* AVFoundation.framework */; };
+		C6C9886D184CE3D600AF639B /* PLPodcastItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C9886C184CE3D600AF639B /* PLPodcastItem.m */; };
+		C6C98870184CE46B00AF639B /* PLAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C9886F184CE46B00AF639B /* PLAPIClient.m */; };
 		C6CD75D3182F5AC0001B5870 /* PLPodcast.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD75D2182F5AC0001B5870 /* PLPodcast.m */; };
 		C6CD75D9182F625E001B5870 /* PLPodcast+ParseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD75D8182F625E001B5870 /* PLPodcast+ParseResponse.m */; };
 		C6D942D91812B5230069D294 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D942D81812B5230069D294 /* UIKit.framework */; };
@@ -101,6 +103,10 @@
 		C6C9885D184226E400AF639B /* slider-thumb-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-thumb-image.png"; sourceTree = "<group>"; };
 		C6C9885E184226E400AF639B /* slider-thumb-image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-thumb-image@2x.png"; sourceTree = "<group>"; };
 		C6C988691843B8FF00AF639B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C6C9886B184CE3D600AF639B /* PLPodcastItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPodcastItem.h; sourceTree = "<group>"; };
+		C6C9886C184CE3D600AF639B /* PLPodcastItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPodcastItem.m; sourceTree = "<group>"; };
+		C6C9886E184CE46B00AF639B /* PLAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLAPIClient.h; sourceTree = "<group>"; };
+		C6C9886F184CE46B00AF639B /* PLAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLAPIClient.m; sourceTree = "<group>"; };
 		C6CD75D1182F5AC0001B5870 /* PLPodcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPodcast.h; sourceTree = "<group>"; };
 		C6CD75D2182F5AC0001B5870 /* PLPodcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPodcast.m; sourceTree = "<group>"; };
 		C6CD75D7182F625E001B5870 /* PLPodcast+ParseResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PLPodcast+ParseResponse.h"; sourceTree = "<group>"; };
@@ -194,6 +200,10 @@
 			children = (
 				C6CD75D1182F5AC0001B5870 /* PLPodcast.h */,
 				C6CD75D2182F5AC0001B5870 /* PLPodcast.m */,
+				C6C9886B184CE3D600AF639B /* PLPodcastItem.h */,
+				C6C9886C184CE3D600AF639B /* PLPodcastItem.m */,
+				C6C9886E184CE46B00AF639B /* PLAPIClient.h */,
+				C6C9886F184CE46B00AF639B /* PLAPIClient.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -438,6 +448,8 @@
 				C62802721823EC5F001A2604 /* Reachability.m in Sources */,
 				C6CD75D3182F5AC0001B5870 /* PLPodcast.m in Sources */,
 				C6CD75D9182F625E001B5870 /* PLPodcast+ParseResponse.m in Sources */,
+				C6C9886D184CE3D600AF639B /* PLPodcastItem.m in Sources */,
+				C6C98870184CE46B00AF639B /* PLAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +566,8 @@
 		C6D9430E1812B5230069D294 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Alex Duroux (GEQ2BH592M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alex Duroux (GEQ2BH592M)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -566,6 +580,8 @@
 					"-lxml2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "AE985454-A396-4983-A8FE-025A79CAFF9A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AE985454-A396-4983-A8FE-025A79CAFF9A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -573,6 +589,8 @@
 		C6D9430F1812B5230069D294 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Alex Duroux (GEQ2BH592M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alex Duroux (GEQ2BH592M)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -585,6 +603,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "AE985454-A396-4983-A8FE-025A79CAFF9A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AE985454-A396-4983-A8FE-025A79CAFF9A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
