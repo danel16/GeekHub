@@ -23,8 +23,8 @@
     UIImage *navBackgroundImage = [UIImage imageNamed:@"navigation_background.png"];
     [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
     
-    UIImage *backButtonImage = [UIImage imageNamed:@"navigation_bar_back_button.png"];
-    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+//    UIImage *backButtonImage = [UIImage imageNamed:@"navigation_bar_back_button.png"];
+//    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     [self.window makeKeyAndVisible];
     return YES;
 }

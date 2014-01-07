@@ -10,6 +10,9 @@
 		4830EB08181C0A4E00EE25D9 /* PLPodcastCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4830EB07181C0A4E00EE25D9 /* PLPodcastCellView.xib */; };
 		4830EB0B181C0B8300EE25D9 /* PLPodcastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4830EB0A181C0B8300EE25D9 /* PLPodcastCell.m */; };
 		4830EB0E181C138C00EE25D9 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4830EB0D181C138C00EE25D9 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		858E035D187C1BE300CDC60E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 858E035C187C1BE300CDC60E /* CoreData.framework */; };
+		858E0360187C1CDD00CDC60E /* PodcastListener.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 858E035E187C1CDD00CDC60E /* PodcastListener.xcdatamodeld */; };
+		858E0363187C1F3F00CDC60E /* PLDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 858E0362187C1F3F00CDC60E /* PLDataManager.m */; };
 		C618E6F31831051200DB62A8 /* navigation_background.png in Resources */ = {isa = PBXBuildFile; fileRef = C618E6F21831051200DB62A8 /* navigation_background.png */; };
 		C618E6F51831051D00DB62A8 /* navigation_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C618E6F41831051D00DB62A8 /* navigation_background@2x.png */; };
 		C62802721823EC5F001A2604 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C62802711823EC5F001A2604 /* Reachability.m */; };
@@ -77,6 +80,10 @@
 		4830EB0C181C138C00EE25D9 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		4830EB0D181C138C00EE25D9 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		4830EB0F181C18DD00EE25D9 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		858E035C187C1BE300CDC60E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		858E035F187C1CDD00CDC60E /* PodcastListener.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PodcastListener.xcdatamodel; sourceTree = "<group>"; };
+		858E0361187C1F3F00CDC60E /* PLDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLDataManager.h; sourceTree = "<group>"; };
+		858E0362187C1F3F00CDC60E /* PLDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLDataManager.m; sourceTree = "<group>"; };
 		C618E6F21831051200DB62A8 /* navigation_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_background.png; sourceTree = "<group>"; };
 		C618E6F41831051D00DB62A8 /* navigation_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_background@2x.png"; sourceTree = "<group>"; };
 		C62802701823EC5F001A2604 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -145,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				858E035D187C1BE300CDC60E /* CoreData.framework in Frameworks */,
 				C6C9886A1843B8FF00AF639B /* AVFoundation.framework in Frameworks */,
 				C67346F4182630B00066C6ED /* ImageIO.framework in Frameworks */,
 				C62802741823ECBF001A2604 /* SystemConfiguration.framework in Frameworks */,
@@ -211,6 +219,8 @@
 		C6D942CC1812B5230069D294 = {
 			isa = PBXGroup;
 			children = (
+				858E035E187C1CDD00CDC60E /* PodcastListener.xcdatamodeld */,
+				858E035C187C1BE300CDC60E /* CoreData.framework */,
 				C6C988691843B8FF00AF639B /* AVFoundation.framework */,
 				C67346F3182630B00066C6ED /* ImageIO.framework */,
 				C67346F11826303D0066C6ED /* SDWebImage.framework */,
@@ -268,6 +278,8 @@
 				C6D943151812B5EB0069D294 /* PLDetailViewController.xib */,
 				C6CD75D7182F625E001B5870 /* PLPodcast+ParseResponse.h */,
 				C6CD75D8182F625E001B5870 /* PLPodcast+ParseResponse.m */,
+				858E0361187C1F3F00CDC60E /* PLDataManager.h */,
+				858E0362187C1F3F00CDC60E /* PLDataManager.m */,
 			);
 			path = PodcastListener;
 			sourceTree = "<group>";
@@ -450,6 +462,8 @@
 				C6CD75D9182F625E001B5870 /* PLPodcast+ParseResponse.m in Sources */,
 				C6C9886D184CE3D600AF639B /* PLPodcastItem.m in Sources */,
 				C6C98870184CE46B00AF639B /* PLAPIClient.m in Sources */,
+				858E0360187C1CDD00CDC60E /* PodcastListener.xcdatamodeld in Sources */,
+				858E0363187C1F3F00CDC60E /* PLDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +688,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		858E035E187C1CDD00CDC60E /* PodcastListener.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				858E035F187C1CDD00CDC60E /* PodcastListener.xcdatamodel */,
+			);
+			currentVersion = 858E035F187C1CDD00CDC60E /* PodcastListener.xcdatamodel */;
+			path = PodcastListener.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C6D942CD1812B5230069D294 /* Project object */;
 }
