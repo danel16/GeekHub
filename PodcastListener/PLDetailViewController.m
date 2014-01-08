@@ -44,6 +44,19 @@
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     [player addObserver:self forKeyPath:@"status" options:0 context:nil];
     
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,
+                                             (unsigned long)NULL), ^(void) {
+        NSString  *path = [NSHomeDirectory() stringByAppendingPathComponent:[@"Documents/" stringByAppendingString:[self.podcast.url lastPathComponent]]];
+        
+        if (![[NSFileManager defaultManager] fileExistsAtPath:path])
+        {
+            NSLog(@"begin saving....");
+            NSData *dbFile = [[NSData alloc] initWithContentsOfURL:podcastUrl];
+            [dbFile writeToFile:path atomically:YES];
+            NSLog(@"End saving file...");
+        }
+    });
+    
     [self.podcastImageView setImageWithURL:[NSURL URLWithString:self.podcast.imageUrl]];
     [self.podcastImageView.layer setMasksToBounds:YES];
     [self.podcastImageView.layer setCornerRadius:6.0f];
